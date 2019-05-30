@@ -34,6 +34,11 @@ public class node {
         return next;
     }
 
+    //Displays the contents of the node
+    public void display(){
+        System.out.println("Data: " + data);
+    }
+
     //Private Data Members
     private int data;
     private node next;
