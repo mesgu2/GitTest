@@ -7,7 +7,7 @@ import static org.junit.Assert.*;
 public class listTest {
 
     @Test
-    public void insert() {
+    public void insertTest() {
         list test = new list();
         test.insert(1);
         test.insert(2);
@@ -16,5 +16,18 @@ public class listTest {
         test.display();
 
         System.out.println("Test should print: 3, 2, 1");
+    }
+
+    //Test for the sum method
+    @Test
+    public void sumTest() {
+        list test = new list();
+        test.insert(1);
+        test.insert(2);
+        test.insert(3);
+
+        int sum = test.sum();
+
+        assertEquals(6, sum);
     }
 }

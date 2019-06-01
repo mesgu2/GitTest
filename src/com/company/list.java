@@ -39,6 +39,11 @@ public class list {
         }
     }
 
+    //Returns the total sum of all the elements in the list
+    public int sum() {
+        return sum(this.head);
+    }
+
     //Recursively traverses the list and displays nodes with each traversal
     private void display(node head){
         if(head == null) return;
@@ -46,6 +51,16 @@ public class list {
         this.head.display();
 
         display(this.head.getNext());
+    }
+
+    //Recursively traverses the list, adding elements with each traversal
+    private int sum(node head) {
+        if(head == null) return 0;
+
+        int sum = 0;
+        sum += head.getData() + sum(head.getNext());
+
+        return sum;
     }
 
     //Head of the linearly linked list
